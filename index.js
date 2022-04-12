@@ -13,7 +13,7 @@ const io = require('socket.io')(3000)
 
 const ZALO_URI = 'mongodb+srv://admin_zalo:0NgAyB59HPb83BlF@cluster0.0yer2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
-mongoose.connect(ZALO_URI, {
+mongoose.connect(process.env.MONGO_URI, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
 })
